@@ -2,6 +2,7 @@ import React from "react";
 import { ITask } from "../../types/task";
 import Button from "../Button";
 import style from './Form.module.scss'
+import {v4 as uuidv4} from 'uuid';
 
 class Form extends React.Component <{setTasks: React.Dispatch<React.SetStateAction<ITask[]>>}> {
   state = {
@@ -12,7 +13,12 @@ class Form extends React.Component <{setTasks: React.Dispatch<React.SetStateActi
   addTask(e:React.FormEvent<HTMLFormElement>){
     e.preventDefault() //para parar o defaut do formulário de atualizar a página
     
-    this.props.setTasks(oldTask => [...oldTask, {...this.state}])
+    this.props.setTasks(oldTask => [...oldTask, {...this.state, selected: false, completed:false, id:uuidv4()}])
+
+    this.setState({
+      task:'',
+      time:'00:00'
+    })
   };
 
 
