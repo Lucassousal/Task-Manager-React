@@ -3,14 +3,15 @@ import style from './Button.module.scss'
 
 type Props = {
   name: string;
-  type?: "button" | "submit" | "reset" | undefined
+  type?: "button" | "submit" | "reset" | undefined;
+  onClick?: () => void;
 }
 
 class Button extends React.Component <Props> {  //Pode ser tipado assim: <{name:string}> ao inves de <Props>
   render() {
-    const {type = "button"} = this.props
+    const {type = "button", onClick} = this.props
     return(
-      <button type={type} className={style.botao}>
+      <button onClick={onClick} type={type} className={style.botao}>
         {this.props.name}  
       </button>
     )
