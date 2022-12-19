@@ -5,20 +5,20 @@ type Props = {
   name: string;
   type?: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
+  // children: React.ReactNode
 }
 
-class Button extends React.Component <Props> {  //Pode ser tipado assim: <{name:string}> ao inves de <Props>
-  render() {
-    const {type = "button", onClick} = this.props
-    return(
-      <button onClick={onClick} type={type} className={style.botao}>
-        {this.props.name}  
-      </button>
-    )
-  }
+function Button({name,type,onClick}:Props) {
+  return(
+    <button 
+      onClick={onClick} 
+      type={type} 
+      className={style.botao}
+    >
+      {name}  
+    </button>
+  )
 }
-
-
 
 export default Button;
 
