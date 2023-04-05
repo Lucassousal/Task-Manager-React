@@ -1,11 +1,9 @@
-## Task manager built with React and TypeScript using SCSS for styling
+# Task manager built with React and TypeScript using SCSS for styling
 
 ## Available Scripts
 
-To install dependencies
-
 ### `npm i`
-
+To install dependencies
 
 ### `npm start`
 
