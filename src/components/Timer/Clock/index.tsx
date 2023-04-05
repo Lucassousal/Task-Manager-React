@@ -8,8 +8,8 @@ export default function Clock({time = 0}:Props) {
   const min = Math.floor(time/60);
   const sec = time % 60;
 
-  const [minDezena, minUnidade] = String(min).padStart(2,'0'); //padStart = se o número não tiver a quantidade de caracteries definido (2) ele preenche com '0'
-  const [secDezena, secUnidade] = String(sec).padStart(2,'0'); //padStart = se o número não tiver a quantidade de caracteries definido (2) ele preenche com '0'
+  const [minDezena, minUnidade] = String(min).padStart(2,'0'); 
+  const [secDezena, secUnidade] = String(sec).padStart(2,'0'); 
   
   return (
     <>

@@ -5,11 +5,12 @@ import { ITask } from '../../types/task';
 
 interface Props {
   tasks: ITask[],
-  selectTask : (selectedTask: ITask) => void
+  selectTask : (selectedTask: ITask) => void,
+  excludeTask: (selectedTask:ITask) => void
 }
 
 
-function List ({tasks, selectTask}: Props) {
+function List ({tasks, selectTask, excludeTask}: Props) {
 
   return(
     <aside className={style.listaTarefas}>
@@ -19,10 +20,9 @@ function List ({tasks, selectTask}: Props) {
         {tasks.map( item => (
           <Item 
           selectTask={selectTask}
+          excludeTask={excludeTask}
           key={item.id}
           {...item}
-          // task={item.task} pode ser feito assim
-          // time={item.time} pode ser feito assim
           />
         ))}
 

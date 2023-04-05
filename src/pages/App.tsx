@@ -35,24 +35,11 @@ function App() {
         return tasks;
       }))
     }
-    
-    
-    
-    
-    // if(selected) {
-    //   setSelected(undefined);
-    //   setTasks(oldTasks => 
-    //     oldTasks.map( task => {
-    //       if(task.id === selected.id) {
-    //         return {
-    //           ...tasks,
-    //           selected: false,
-    //           completed: true
-    //         }
-    //       }
-    //       return task;
-    //     }))
-    // }
+  }
+
+  function excludeTask(selectedTask:ITask) {
+    const newTasks = tasks.filter(task => task.id !== selectedTask.id)
+    setTasks(newTasks)
   }
 
   return (
@@ -61,6 +48,7 @@ function App() {
       <List 
         tasks={tasks}
         selectTask={selectTask} 
+        excludeTask={excludeTask}
       />
       <Timer 
       selected={selected}

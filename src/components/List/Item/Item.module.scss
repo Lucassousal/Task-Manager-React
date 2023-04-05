@@ -1,5 +1,5 @@
 .item {
-  background-color: #4D4D4D;
+  background-color: #8f552f;
   border-radius: 8px;
   box-shadow: 2px 4px 4px #0000009F;
   padding: 12px;
@@ -22,12 +22,12 @@
 }
 
 .itemSelecionado {
-  background-color: #292929;
+  background-color: #92420d;
   box-shadow: 2px 4px 4px #0000009F inset;
 }
 
 .itemCompletado {
-  background-color: #566F42;
+  background-color: #436824;
   cursor: auto;
 
   .concluido {
@@ -42,4 +42,43 @@
     width: 42px;
     height: 43px;
   }
+}
+
+.taskContainer{
+  position: relative;
+
+  .excludeContainer{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    z-index: 999;
+    cursor: pointer;
+
+    &:hover{
+      scale: 1.1;
+      color: #db0909 ;
+      background-color: #fff;
+      border: 1px solid #db0909 ;
+      transition: all ease-in-out 0.2s;
+    } 
+
+    .excludeBtn {
+      font-size: 18px;
+      color: #6b1010;
+      margin-top: 5px;
+
+      &:hover{
+        color: #db0909 ;
+        transition: all ease-in-out 0.2s;
+      } 
+    }
+
+  }
+  
 }

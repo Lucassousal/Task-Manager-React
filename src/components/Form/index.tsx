@@ -16,7 +16,7 @@ function Form({setTasks}:Props){
   const [time, setTime] = useState('00:00')
 
   function addTask(e:React.FormEvent<HTMLFormElement>){
-    e.preventDefault() //para parar o defaut do formulário de atualizar a página
+    e.preventDefault() 
     
     setTasks(oldTask => [...oldTask, {task, time, selected: false, completed:false, id:uuidv4()}])
 
@@ -39,8 +39,8 @@ function Form({setTasks}:Props){
         <label htmlFor="time">Tempo</label>
         <input 
           type="time" step="1" name="time" id="time" min="00:00:00" max="01:30:00"
-          value={time} //Adicionado para mudar o valor do imput para poder pega-lo
-          onChange={ e => setTime(e.target.value)} //é utilizado o this pois é classe; e.target.value é como pega os valores de inputs
+          value={time}
+          onChange={ e => setTime(e.target.value)} 
         />
       </div>
       <Button

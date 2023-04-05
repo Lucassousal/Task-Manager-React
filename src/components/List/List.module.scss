@@ -1,10 +1,14 @@
 .listaTarefas {
   grid-area: tarefas;
   height: 100%;
+  width: 100%;
+  background-color: #ce7a42;
+  padding: 10px;
+  border-radius: 10px;
 
   h2 {
     font-size: 1.25rem;
-    margin-bottom: 12px;
+    margin: 12px auto;
   }
 
   ul {

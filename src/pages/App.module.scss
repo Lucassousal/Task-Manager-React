@@ -6,7 +6,7 @@
   "cronometro"
   "tarefas"
   ;
-  row-gap: 24px;
+  row-gap: 35px;
   min-width: 320px;
   min-height: calc(100vh - 32px);
   width: 100%;
@@ -20,11 +20,11 @@
     "nova-tarefa tarefas"
     "cronometro tarefas"
     ;
-    column-gap: 64px;
+    column-gap: 30px;
     grid-template-rows: min-content min-content;
     grid-template-columns: 750px 300px;
     justify-content: center;
     align-content: center;
-    padding: 64px;
+    padding: 32px;
   }
 }
