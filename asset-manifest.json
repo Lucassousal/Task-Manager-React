@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Task-Manager-React/static/css/main.7f8465aa.css",
+    "main.js": "/Task-Manager-React/static/js/main.db4fe7a3.js",
+    "static/media/check-mark.svg": "/Task-Manager-React/static/media/check-mark.7804822e479e0f94c4e2.svg",
+    "index.html": "/Task-Manager-React/index.html",
+    "main.7f8465aa.css.map": "/Task-Manager-React/static/css/main.7f8465aa.css.map",
+    "main.db4fe7a3.js.map": "/Task-Manager-React/static/js/main.db4fe7a3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f8465aa.css",
+    "static/js/main.db4fe7a3.js"
+  ]
+}
